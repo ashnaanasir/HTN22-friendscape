@@ -2,13 +2,15 @@ import { Fragment } from 'react';
 import {Button, View, StyleSheet, Text, Image} from 'react-native';
 
 import GreetingCard from '../components/GreetingCard';
+import FriendFinderScreen from './FriendFinderScreen';
 
 const Home = () => {
     return (
         <Fragment>
             <GreetingCard style={styles.greetingCard}/>
+            <FriendFinderScreen />
         </Fragment>
-            
+        
     );
 }
 
