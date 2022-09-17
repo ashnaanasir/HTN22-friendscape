@@ -4,11 +4,11 @@ import Home from './src/pages/Home';
 import { updateFriends } from './src/friend-manager';
 
 useEffect(() => {
-  const tickInterval = setInterval(() => update(), 1000);
-  const friendTickInterval = setInterval(() => updateFriends(), 1800000);
+  //const tickInterval = setInterval(() => update(), 1000);
+  //const friendTickInterval = setInterval(() => updateFriends(), 1800000);
   return () => {
-    clearInterval(tickInterval);
-    clearInterval(friendTickInterval);
+    //clearInterval(tickInterval);
+    //clearInterval(friendTickInterval);
   };
 }, []);
 
