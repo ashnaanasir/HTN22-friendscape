@@ -22,16 +22,22 @@ export default class Database {
                 name STRING,
                 points INT,
                 likes STRING[],
-                dislikes STRING[]
+                dislikes STRING[],
+                personality ENUM('introvert', 'extrovert', 'ambivert'),
+                last_meetup DATETIME
             )
         `)
     }
 
     //Add a new friend to the database
-    async addFriend(id, name, points, likes, dislikes) {
+    async addFriend(id, name, points, likes, dislikes, personality, last_meetup) {
+        if (!["introvert", "extrovert", "ambivert"].includes(personality)) {
+            throw new Error("Invalid personality")
+        }
+
         await this.client.query(`
             INSERT INTO friends (id, name, points, likes, dislikes)
-            VALUES (${id}, '${name}', ${points}, '${likes}', '${dislikes}')
+            VALUES (${id}, '${name}', ${points}, '${likes}', '${dislikes}', '${personality}')
         `)
     }
 
@@ -40,7 +46,7 @@ export default class Database {
         const result = await this.client.query(`
             SELECT * FROM friends WHERE id = ${id}
         `)
-        return result.rows[0]
+        return result.rows.length > 0 ? result.rows[0] : false
     }
 
     //Update a friend's points
@@ -55,6 +61,13 @@ export default class Database {
         const likeOrNot = likeBool ? "likes" : "dislikes"
         await this.client.query(`
             UPDATE friends SET ${likeOrNot} = ${likeOrNot} || '{${topic}}' WHERE id = ${id}
+        `)
+    }
+
+    //Update last_meetup to the current datetime
+    async updateLastMeetup(id) {
+        await this.client.query(`
+            UPDATE friends SET last_meetup = NOW() WHERE id = ${id}
         `)
     }
 
