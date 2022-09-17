@@ -1,0 +1,1 @@
+store all sprites/img/static assets
