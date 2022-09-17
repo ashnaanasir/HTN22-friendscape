@@ -1,16 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import Home from './src/pages/Home';
-import { updateFriends } from './src/friend-manager';
+//import { updateFriends } from './src/friend-manager';
 
-useEffect(() => {
+/*useEffect(() => {
   //const tickInterval = setInterval(() => update(), 1000);
   //const friendTickInterval = setInterval(() => updateFriends(), 1800000);
   return () => {
     //clearInterval(tickInterval);
     //clearInterval(friendTickInterval);
   };
-}, []);
+}, []);*/
 
 export default function App() {
   return (

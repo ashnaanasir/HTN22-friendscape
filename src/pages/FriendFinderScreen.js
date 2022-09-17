@@ -9,11 +9,42 @@ const FriendFinderScreen = () => {
 
     return (
         <View>
-            <Camera />
+            <View style={styles.background}>
+                <Image style={styles.background} />
+                <Camera style={styles.camera} />
+            </View>
+            <View style={styles.main}> </View>
         </View>
     );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    background: {
+        flex: 1,
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        overflow: 'hidden',
+    },
+    camera: {
+        flex: 1,
+        width: 'auto',
+        height: '100vh',
+        resizeMode: 'cover',
+        position: 'absolute',
+        top: '-9999px',
+        bottom: '-9999px',
+        left: '-9999px',
+        right: '-9999px',
+        margin: 'auto',
+    },
+    main: {
+        flex: 1,
+        width: '100%',
+        height: '100%',
+    }
+});
 
 export default FriendFinderScreen;

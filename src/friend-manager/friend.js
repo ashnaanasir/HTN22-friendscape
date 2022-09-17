@@ -5,12 +5,12 @@ export default class Friend {
         this.id = id;
         this.database = database;
 
-        this.getFriendData();
+        this.loadFriendData();
 
         this.updatePosition();
     }
 
-    getFriendData() {
+    loadFriendData() {
         this.database.getFriend(this.id).then((data) => {
             if (data) {
                 this.name = data.name;
