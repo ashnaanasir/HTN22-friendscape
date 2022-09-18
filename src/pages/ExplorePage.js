@@ -1,9 +1,9 @@
-import { Text } from "react-native";
+import { Text, Image, View, } from "react-native";
 
-const AvatarEdit = () => {
+const ExplorePage = () => {
     return (
-        <Text>We are working on this, we swear!</Text>
+        <Text>Testing</Text>
     );
 }
 
-export default AvatarEdit;
+export default ExplorePage;
