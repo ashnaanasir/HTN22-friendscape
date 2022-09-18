@@ -5,18 +5,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import FriendFinderScreen from "./src/pages/FriendFinderScreen";
 import FriendChatScreen from "./src/pages/FriendChatScreen";
-import CameraScreen from "./src/pages/CameraScreen";
-//import { updateFriends } from './src/friend-manager';
+// import CameraScreen from "./src/pages/CameraScreen";
 
 export default function App() {
-  /*useEffect(() => {
-  //const tickInterval = setInterval(() => update(), 1000);
-  //const friendTickInterval = setInterval(() => updateFriends(), 1800000);
-  return () => {
-    //clearInterval(tickInterval);
-    //clearInterval(friendTickInterval);
-  };
-}, []);*/
 
   const Stack = createNativeStackNavigator();
 
@@ -24,9 +15,19 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="FriendFinderScreen" component={FriendFinderScreen} />
+        <Stack.Screen name="FriendFinderScreen" component={FriendFinderScreen} 
+          options={{
+            headerTitle: '',
+            headerRight: () => (
+              <Button
+                onPress={() => console.log('pressed')}
+                title="Info"
+                color="#00cc00"
+              />
+            ),
+          }}
+        />
         <Stack.Screen name="FriendChatScreen" component={FriendChatScreen} />
-        <Stack.Screen name="CameraScreen" component={CameraScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
