@@ -1,8 +1,5 @@
 import { Image, View, StyleSheet, TouchableOpacity, Text } from "react-native";
 import GreetingCard from "../components/GreetingCard";
-// import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-
-// import TopBar from "../components/TopBar";
 
 const Home = ({ navigation }) => {
   return (
