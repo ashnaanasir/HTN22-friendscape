@@ -1,20 +1,16 @@
-import { View , Image, Button, StyleSheet} from "react-native";
+import React, { useState, useEffect } from 'react';
+import { View , Image, Button, Text, StyleSheet} from "react-native";
 import { Camera, CameraType } from 'expo-camera';
-import { useState } from 'react';
+
 
 const FriendFinderScreen = ( { navigation, route } ) => {
+ 
     const [type, setType] = useState(CameraType.back);
     const [permission, requestPermission] = Camera.useCameraPermissions();
 
     return (
         <View>
-            <View style={styles.background}>
-                
-                <Camera style={styles.camera} />
-            </View>
-            <View style={styles.main}> 
-                <Button title="See Friend" onPress={() => navigation.navigate('ChatScreen', {activeFriend: {name: "test", points: 10}})} /*new Friend(0, route.params.mapManager)})}*/ />
-            </View>
+            <Text>Hello, here we find friends.</Text>
         </View>
     );
 }
@@ -49,3 +45,35 @@ const styles = StyleSheet.create({
 });
 
 export default FriendFinderScreen;
+
+
+// const [hasCameraPermission, setHasCameraPermission] = useState(false);
+    // const [camera, setCamera] = useState(null);
+    // const [image, setImage] = useState(null);
+    // const type = Camera.Constants.Type.back;
+    // useEffect(() => {
+    //     (async () => {
+    //     const cameraStatus = await Camera.requestCameraPermissionsAsync();
+    //     setHasCameraPermission(true);})();
+    //     }, []);
+
+    // const takePicture = async () => {
+    //     if(camera){
+    //         const data = await camera.takePictureAsync(null)
+    //         setImage(data.uri);
+    //     }
+    //     }
+
+    // return (
+        
+    //     <View>
+    //         <View>
+    //             <Camera 
+    //                 ref={ref => setCamera(ref)}
+    //                 type={type}
+    //                 ratio={'1:1'} 
+                    
+    //             />
+    //         </View>
+    //     </View>
+    // );

@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Brit",
+        "avatarName": "BritIcon.png",
+        "level": 2,
+        "maxLevel": 10,
+        "Description": "Want to get an invite to any impromptu party in town? Brit's your gal. keep in touch with her. Please."
+        
+    },
+    {
+        "name": "am.i.Will",
+        "avatarName": "WillIcon.png",
+        "level": 383652,
+        "maxLevel": 100000,
+        "Description": "COOLEST GUY EVER, YOU WANT TO BE AND STAY BEST FRIENDS FOREVER. LOREM IPSUM STUFF STUFF STUFF STUFF STUFF STUFF"
+        
+    },
+    {
+        "name": "wi.i.Am",
+        "avatarName": "WiiIcon.png",
+        "level": 873,
+        "maxLevel": 1000,
+        "Description": "will.i.am's offbrand metaverse persona. Not that fun but you still want to stay in touch. "
+        
+    },
+    {
+        "name": "Stein",
+        "avatarName": "BritIcon.png",
+        "level": 2,
+        "maxLevel": 10,
+        "Description": "For when you need help with the math and physics problems. And haircare tips."
+        
+    },
+    {
+        "name": "gal",
+        "avatarName": "GalIcon.png",
+        "level": 12,
+        "maxLevel": 30,
+        "Description": "A cool gal round the block. You will always wave and hang out when you have nothing else to do. She makes good cookies and recommends the best books and movies."
+        
+    } 
+]  

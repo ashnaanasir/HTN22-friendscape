@@ -1,0 +1,17 @@
+{
+    "userName": "Pika",
+    "locationLat": 42.83,
+    "locationLong": 28.91,
+    "city": "Waterloo", 
+    "active": true,
+    "avatarName": "william.png",
+    "friends": [
+        "Brit",
+        "am.i.Will",
+        "wi.i.Am",
+        "stein",
+        "gal"
+    ]
+      
+  }
+  

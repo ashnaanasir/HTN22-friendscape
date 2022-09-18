@@ -1,20 +1,17 @@
 import { Fragment } from "react";
 import { Button, View, StyleSheet, Text, Image, StatusBar } from "react-native";
 import GreetingCard from "../components/GreetingCard";
-import MapManager from "../map-manager/map-manager";
+// import MapManager from "../map-manager/map-manager";
 
 const Home = ({ navigation }) => {
-    const mapManager = new MapManager();
+    // const mapManager = new MapManager();
   return (
     <View style={styles.container}>
-      <Fragment>
         <GreetingCard style={styles.greetingCard} />
-      </Fragment>
-      <StatusBar />
-      <Button
+      <Button style={styles.button}
         title="Find Friend"
         onPress={() =>
-          navigation.navigate('FriendFinderScreen', { mapManager: mapManager })
+          navigation.navigate('FriendFinderScreen')
         }
       />
     </View>
@@ -34,6 +31,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  button: {
+    marginTop: 50,
+    padding: 25
+  }
 });
 
 export default Home;
