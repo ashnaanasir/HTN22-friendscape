@@ -13,11 +13,11 @@ export default function FriendChatScreen( { navigation, route } ) {
         <View>
             <View style={styles.background}>
                 <Image style={styles.background} />
-                <Camera style={styles.camera} />
             </View>
             <View style={styles.main}> 
                 <Text style={styles.friendName}> {friendName} </Text>
                 <Text style={styles.friendPoints}> {friendPoints} </Text>
+                <Button title="Record" onPress={() => navigation.goBack()} />
             </View>
         </View>
     );

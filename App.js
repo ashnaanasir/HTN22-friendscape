@@ -5,7 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import FriendFinderScreen from "./src/pages/FriendFinderScreen";
 import FriendChatScreen from "./src/pages/FriendChatScreen";
-import AvatarEdit from "./src/pages/AvatarEdit";
+import AvatarEdit from "./src/pages/AvatarEdit"
 // import CameraScreen from "./src/pages/CameraScreen";
 
 export default function App() {
