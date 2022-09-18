@@ -1,13 +1,3 @@
-<<<<<<< Updated upstream
-import { View, StyleSheet } from "react-native";
-
-export default function ExplorePage() {
-  return (
-    <View>
-    </View>
-  );
-}
-=======
 import { Text, Image, View, StyleSheet } from "react-native";
 import bgImg from '../assets/DC.png';
 import TopBar from "../components/TopBar";
@@ -31,4 +21,3 @@ const styles = StyleSheet.create({
         }
 });
 export default ExplorePage;
->>>>>>> Stashed changes
