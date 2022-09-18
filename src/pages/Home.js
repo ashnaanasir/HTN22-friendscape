@@ -7,9 +7,15 @@ const Home = ({ navigation }) => {
     <View style={styles.container}>
       <GreetingCard style={styles.greetingCard} />
       <Button style={styles.button}
-        title="Find Friend"
+        title="View Friend"
         onPress={() =>
           navigation.navigate('FriendFinderScreen')
+        }
+      />
+      <Button style={styles.button}
+        title="Edit Avatar"
+        onPress={() =>
+          navigation.navigate('AvatarEditScreen')
         }
       />
     </View>
@@ -25,18 +31,18 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#333",
     alignItems: "center",
     justifyContent: "center",
   },
   greetingCard: {
-    flex: 1,
     backgroundColor: "#ddd",
     alignItems: "center",
     justifyContent: "center",
   },
   button: {
-    marginTop: 50,
+    width: 100,
+    marginTop: 250,
     padding: 25
   }
 });

@@ -6,7 +6,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 const TopBar = ({ navigation }) => {
     return(
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => navigation.navigate(CameraScreen)} >
+        <TouchableOpacity onPress={() => navigation.navigate('CameraScreen')} >
             <FontAwesome5 name={'backward'} />
         </TouchableOpacity>     
         
