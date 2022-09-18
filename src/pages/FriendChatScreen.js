@@ -2,10 +2,10 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import { Camera, CameraType } from 'expo-camera';
 import { useState } from 'react';
 
-export default function FriendChatScreen() {
-    const [friendSprite, setFriendSprite] = useState(prop.activeFriend.sprite);
-    const [friendName, setFriendName] = useState(prop.activeFriend.name);
-    const [friendPoints, setFriendPoints] = useState(prop.activeFriend.points);
+export default function FriendChatScreen( { navigation, route } ) {
+    //const [friendSprite, setFriendSprite] = useState(route.params.activeFriend.sprite);
+    const [friendName, setFriendName] = useState(route.params.activeFriend.name);
+    const [friendPoints, setFriendPoints] = useState(route.params.activeFriend.points);
     const [type, setType] = useState(CameraType.back);
     const [permission, requestPermission] = Camera.useCameraPermissions();
 
@@ -18,10 +18,10 @@ export default function FriendChatScreen() {
             <View style={styles.main}> 
                 <Text style={styles.friendName}> {friendName} </Text>
                 <Text style={styles.friendPoints}> {friendPoints} </Text>
-                <Image style={styles.friendSprite} source={friendSprite} />
             </View>
         </View>
     );
+    //<Image style={styles.friendSprite} source={friendSprite} />
 }
 
 const styles = StyleSheet.create({

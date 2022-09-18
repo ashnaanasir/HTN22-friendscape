@@ -1,9 +1,10 @@
 import { gaussian } from "../helpers/math-helpers";
 
+const SERVER_URL = "http://localhost:3001";
+
 export default class Friend {
-    constructor(id, database, mapManager) {
+    constructor(id) {
         this.id = id;
-        this.database = database;
 
         this.loadFriendData();
 
@@ -46,7 +47,7 @@ export default class Friend {
 
     async updatePoints(points) {
         this.points += points;
-        await this.database.updatePoints(this.id, this.points);
+        await postMessage(this.id, this.points);
     }
 
     async addToPrefs(topic, likeBool) {
@@ -55,7 +56,7 @@ export default class Friend {
     }
 
     async updatePosition() {
-        let location = await this.map.getRandomLocation();
+        //let location = await this.map.getRandomLocation();
     }
 
 

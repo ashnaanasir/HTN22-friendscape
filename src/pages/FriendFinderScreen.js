@@ -1,19 +1,20 @@
-import { View , Text} from "react-native";
+import { View , Image, Button, StyleSheet} from "react-native";
 import { Camera, CameraType } from 'expo-camera';
 import { useState } from 'react';
 
-
-const FriendFinderScreen = () => {
+const FriendFinderScreen = ( { navigation, route } ) => {
     const [type, setType] = useState(CameraType.back);
     const [permission, requestPermission] = Camera.useCameraPermissions();
 
     return (
         <View>
             <View style={styles.background}>
-                <Image style={styles.background} />
+                
                 <Camera style={styles.camera} />
             </View>
-            <View style={styles.main}> </View>
+            <View style={styles.main}> 
+                <Button title="See Friend" onPress={() => navigation.navigate('ChatScreen', {activeFriend: {name: "test", points: 10}})} /*new Friend(0, route.params.mapManager)})}*/ />
+            </View>
         </View>
     );
 }
