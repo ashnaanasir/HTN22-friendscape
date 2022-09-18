@@ -1,50 +1,62 @@
-import { Button, View, StyleSheet, Text, Image, StatusBar } from "react-native";
+import { Image, View, StyleSheet, TouchableOpacity, Text } from "react-native";
 import GreetingCard from "../components/GreetingCard";
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+
 // import TopBar from "../components/TopBar";
 
 const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <GreetingCard style={styles.greetingCard} />
-      <Button style={styles.button}
-        title="View Friend"
+      <View style={styles.buttonsContainer} >
+
+      <TouchableOpacity
+        style={styles.button}
         onPress={() =>
           navigation.navigate('FriendFinderScreen')
         }
-      />
-      <Button style={styles.button}
-        title="Edit Avatar"
+        >
+        <Text>View Friends</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.button}
         onPress={() =>
           navigation.navigate('AvatarEditScreen')
         }
-      />
+        >
+        <Text>Edit Avatar </Text>
+      </TouchableOpacity>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  top: {
-    flex: 1,
-    flexOrder: "row",
-    justifyContent: "space-between",
-    fontSize: "28px",
-  },
   container: {
     flex: 1,
     backgroundColor: "#333",
     alignItems: "center",
     justifyContent: "center",
+    paddingTop: 60
   },
   greetingCard: {
     backgroundColor: "#ddd",
     alignItems: "center",
     justifyContent: "center",
   },
+  buttonsContainer: {
+    textAlign: "center",
+    marginTop: 140,
+    marginBottom: -15
+  },
   button: {
-    width: 100,
-    marginTop: 250,
-    padding: 25
-  }
+    backgroundColor: '#FFE193',
+    width: 250,
+    textAlign: "center",
+    padding: 15,
+    margin: 10,
+    borderRadius: 25
+  },
 });
 
 export default Home;

@@ -5,7 +5,7 @@ import avatar from '../assets/Pika.png';
 const GreetingCard = () => {
     const username = 'Pika'; //TODO: Make it dynamic after adding auth
     return (
-        <View style={{width: 350, height: 200, backgroundColor: '#eee', borderRadius: 20, marginTop: -70, marginBottom: 150}}>
+        <View style={{width: 350, height: 200, backgroundColor: '#eee', borderRadius: 20, marginTop: -90}}>
             <View style={{width: 300, height: 20, backgroundColor: '#333', borderRadius: 10, marginTop: 20, marginLeft: 26}}></View>
             <Text style={styles.greetingHeading}>Hello, 
                 <Text style={styles.greetingUsername}> {username}</Text>
