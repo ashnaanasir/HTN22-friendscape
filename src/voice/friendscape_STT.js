@@ -67,7 +67,7 @@ function sleep(ms) {
 
 //test code:
 const file = "./Why are we still here just to suffer.mp3";
-let STT = new friendscape_STT("dae5f69676b245c6a71ec100e4cc4074")
+let STT = new friendscape_STT("Enter your assemblyAI API key")
 STT.STT_synthesize(file).then(function(result) {
     console.log(result) // "Some User token"
 })

@@ -17,7 +17,7 @@ class friendscape_AI {
     }
 }
 
-ai = new friendscape_AI('ysZygoq6DRCGW7FPzlSaYBUhB5qENdBw96KMPFNx');
+ai = new friendscape_AI('Enter your cohere API key');
 ai.generate_response("Why are we still here? just to suffer?").then(function(result) {
     console.log(result) // "Some User token"
 })
