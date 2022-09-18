@@ -9,6 +9,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "cohere-ai": "^4.3.0",
     "expo": "~46.0.9",
     "expo-status-bar": "~1.4.0",
     "pg": "^8.8.0",
