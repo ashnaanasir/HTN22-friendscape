@@ -1,8 +1,11 @@
 import { Fragment } from "react";
 import { Button, View, StyleSheet, Text, Image, StatusBar } from "react-native";
 import GreetingCard from "../components/GreetingCard";
+import CameraScreen from "./CameraScreen";
 // import MapManager from "../map-manager/map-manager";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+// import { NavigationContainer } from "@react-navigation/native";
+// import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const TopBar = ( { navigation }) => {
   return(
@@ -10,21 +13,23 @@ const TopBar = ( { navigation }) => {
       <FontAwesome5 
       name={'backward'}
       onPress={() =>
-        navigation.navigate('CameraScreen')
+        navigation.navigate(CameraScreen)
       }
        />
       <Text>
         Settings
       </Text>
     </Fragment>
-  )
+  );
 }
+
+// const Stack = createNativeStackNavigator();
 
 const Home = ({ navigation }) => {
     // const mapManager = new MapManager();
   return (
     <View style={styles.container}>
-      <TopBar navigation={navigation}/>
+      <TopBar />
       <Fragment>
         <GreetingCard style={styles.greetingCard} />
       </Fragment>
@@ -64,3 +69,4 @@ const styles = StyleSheet.create({
 });
 
 export default Home;
+
