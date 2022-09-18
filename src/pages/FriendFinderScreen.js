@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, Image, Button, Text, StyleSheet } from "react-native";
-import { Camera, CameraType } from "expo-camera";
-import React, { useState, useEffect, Fragment } from 'react';
-import { View , Image, Button, Text, StyleSheet} from "react-native";
 import { ListItem, Avatar } from "@react-native-material/core";
-import { Camera, CameraType } from 'expo-camera';
 import BritIcon from '../assets/BritIcon.png';
 import GalIcon from '../assets/GalIcon.png';
 import WiiIcon from '../assets/WiiIcon.png';
@@ -15,8 +11,6 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const FriendFinderScreen = ( { navigation, route } ) => {
  
-    const [type, setType] = useState(CameraType.back);
-    const [permission, requestPermission] = Camera.useCameraPermissions();
 
     const forwardIcon = <Icon name={"forward"} size={30} style={{color: "grey"}}/>;
     const dummy = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
