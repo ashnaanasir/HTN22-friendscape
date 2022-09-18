@@ -1,6 +1,7 @@
 import { Image, View, StyleSheet, TouchableOpacity, Text } from "react-native";
 import GreetingCard from "../components/GreetingCard";
 
+
 const Home = ({ navigation }) => {
   return (
     <View style={styles.container}>
@@ -13,7 +14,8 @@ const Home = ({ navigation }) => {
           navigation.navigate('FriendFinderScreen')
         }
         >
-        <Text>View Friends</Text>
+        <Text>View Friends
+        </Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}

@@ -1,26 +1,31 @@
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
-import CameraScreen from '../pages/CameraScreen';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import { View, StyleSheet, Image} from "react-native";
+import userIcon from '../assets/PikaIcon.png';
+import menuIcon from '../assets/icons8-menu-30.png';
+import { Flex } from "@react-native-material/core";
 
 
-const TopBar = ({ navigation }) => {
+const TopBar = () => {
     return(
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => navigation.navigate('CameraScreen')} >
-            <FontAwesome5 name={'backward'} />
-        </TouchableOpacity>     
-        
+        <Image source={userIcon} style={{width: 50, height: 50}} />
+        <Image source={menuIcon} style={{width: 50, height: 50}} />
       </View>
     );
   }
   
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        position: 'absolute',
+        top: 0,
         backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-    }
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingTop: 5,
+        width: 400
+        
+    }   
+
 });
 
 export default TopBar;
