@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { View, Image, Button, Text, StyleSheet } from "react-native";
 import { Camera, CameraType } from "expo-camera";
-import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
-
+//import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+/*
 <MapView
   provider={PROVIDER_GOOGLE}
   style={styles.map}
@@ -12,7 +12,7 @@ import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
     latitudeDelta: 0.015,
     longitudeDelta: 0.0121,
   }}
-/>;
+/>;*/
 
 const FriendFinderScreen = ({ navigation, route }) => {
   return <View></View>;
