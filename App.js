@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import FriendFinderScreen from "./src/pages/FriendFinderScreen";
 import FriendChatScreen from "./src/pages/FriendChatScreen";
 import ExplorePage from "./src/pages/ExplorePage";
+import MapPage from "./src/pages/MapPage";
 // import CameraScreen from "./src/pages/CameraScreen";
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
         <Stack.Screen name="FriendFinderScreen" component={FriendFinderScreen} />
         <Stack.Screen name="FriendChatScreen" component={FriendChatScreen} />
         <Stack.Screen name="ExplorePageScreen" component={ExplorePage} />
+        <Stack.Screen name="MapPageScreen" component={MapPage} />
       </Stack.Navigator>
     </NavigationContainer>
   );

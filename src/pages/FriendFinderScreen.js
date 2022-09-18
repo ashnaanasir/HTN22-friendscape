@@ -6,13 +6,13 @@ import GalIcon from '../assets/GalIcon.png';
 import WiiIcon from '../assets/WiiIcon.png';
 import SteinIcon from '../assets/SteinIcon.png';
 import WillIcon from '../assets/WillIcon.png';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+//import Icon from 'react-native-vector-icons/FontAwesome5';
 
 
 const FriendFinderScreen = ( { navigation, route } ) => {
  
 
-    const forwardIcon = <Icon name={"forward"} size={30} style={{color: "grey"}}/>;
+    //const forwardIcon = <Icon name={"forward"} size={30} style={{color: "grey"}}/>;
     const dummy = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
     
     return (

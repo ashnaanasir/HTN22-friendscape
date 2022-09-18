@@ -1,9 +1,8 @@
-import { Text, Image, View, } from "react-native";
+import { View, StyleSheet } from "react-native";
 
-const ExplorePage = () => {
-    return (
-        <Text>Testing</Text>
-    );
+export default function ExplorePage() {
+  return (
+    <View style={styles.container}>
+    </View>
+  );
 }
-
-export default ExplorePage;

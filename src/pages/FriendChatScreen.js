@@ -1,6 +1,7 @@
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { Camera, CameraType } from 'expo-camera';
 import { useState } from 'react';
+import { AnimatedRegion, Animated } from 'react-native';
 
 export default function FriendChatScreen( { navigation, route } ) {
     //const [friendSprite, setFriendSprite] = useState(route.params.activeFriend.sprite);
@@ -17,7 +18,7 @@ export default function FriendChatScreen( { navigation, route } ) {
             <View style={styles.main}> 
                 <Text style={styles.friendName}> {friendName} </Text>
                 <Text style={styles.friendPoints}> {friendPoints} </Text>
-                <Button title="Record" onPress={() => navigation.goBack()} />
+
             </View>
         </View>
     );
