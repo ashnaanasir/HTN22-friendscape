@@ -1,32 +1,35 @@
+import friendData from "../../sample_data/friends_database";
+import axios from "axios";
+
 export default class FriendManager {
-    constructor(database, mapManager) {
-        this.database = database;
-        this.mapManager = mapManager;
+    constructor(context) {
+        this.context = context;
         this.friends = [];
-    
+        this.loadFriendData();
     }
 
-    getFriends() {
-        this.database.getFriends().then((data) => {
-            data.forEach((friend) => {
-                this.friends.push(new Friend(friend.id, this.database, this.mapManager));
-            });
-        });
-    }
+    //Hack for presentations. 
+    async loadFriendData() {
+        for(let i = 0; i < friendData.length; i++) {
+            let x = new Friend(friendData[i].id, this.context)
+            
+            await axios.post('http://localhost:3001/api/insert', {
+                type: 'friend',
+                id: x.id,
+                name: x.name,
+                points: x.points,
+                likes: x.likes,
+                dislikes: x.dislikes,
+                personality: x.personality
+            })
 
-    async addFriend(id) {
-        await this.database.addFriend(id);
-        this.friends.push(new Friend(id, this.database, this.mapManager));
-    }
-
-    async removeFriend(id) {
-        await this.database.removeFriend(id);
-        this.friends = this.friends.filter((friend) => friend.id !== id);
+            this.friends.push(x);
+        }
     }
 
     async updateFriends() {
         this.friends.forEach((friend) => {
-            friend.updatePosition();
+            friend.update();
         });
     }
 }

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { View , Text, ProgressViewIOSComponent , StyleSheet , Image } from "react-native";
 import avatar from '../assets/Pika.png';
 

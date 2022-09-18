@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { View, Image, Button, Text, StyleSheet } from "react-native";
 import { ListItem, Avatar } from "@react-native-material/core";
 import BritIcon from '../assets/BritIcon.png';
@@ -22,7 +22,7 @@ const FriendFinderScreen = ( { navigation, route } ) => {
                     title="brit"
                     leading={<Avatar image={BritIcon}/>}
                     secondaryText={dummy}
-                    trailing={forwardIcon}
+                    //trailing={forwardIcon}
                     overline={"Level 2"}
                     style={styles.listItem}
                 />
@@ -31,7 +31,7 @@ const FriendFinderScreen = ( { navigation, route } ) => {
                     title="am.i.will"
                     leading={<Avatar image={WillIcon}/>}
                     secondaryText={dummy}
-                    trailing={forwardIcon}
+                    //trailing={forwardIcon}
                     overline={"Level 38438"}
                 />
                 <ListItem
@@ -39,7 +39,7 @@ const FriendFinderScreen = ( { navigation, route } ) => {
                     title="wi.i.am"
                     leading={<Avatar image={WiiIcon}/>}
                     secondaryText={dummy}
-                    trailing={forwardIcon}
+                    //trailing={forwardIcon}
                     overline={"Level 873"}
                 />
                 <ListItem
@@ -47,7 +47,7 @@ const FriendFinderScreen = ( { navigation, route } ) => {
                     title="stein"
                     leading={<Avatar image={SteinIcon}/>}
                     secondaryText={dummy}
-                    trailing={forwardIcon}
+                    //trailing={forwardIcon}
                     overline={"Level 1"}
                 />
                 <ListItem
@@ -55,18 +55,10 @@ const FriendFinderScreen = ( { navigation, route } ) => {
                     title="gal"
                     leading={<Avatar image={GalIcon}/>}
                     secondaryText={dummy}
-                    trailing={forwardIcon}
+                    //trailing={forwardIcon}
                     overline={"Level 12"}
                 />
                 <View style={styles.main}>
-                <Icon 
-                    name={"plus"} 
-                    size={50}
-                    style={{
-                        padding: 25,
-                        color: "grey",
-                    }}
-                />
                 </View>
         </View>
     );
@@ -126,3 +118,14 @@ export default FriendFinderScreen;
 //         </View>
 //     </View>
 // );
+
+/*
+<Icon 
+                    name={"plus"} 
+                    size={50}
+                    style={{
+                        padding: 25,
+                        color: "grey",
+                    }}
+                />
+                */

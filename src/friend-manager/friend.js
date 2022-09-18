@@ -3,15 +3,16 @@ import { gaussian } from "../helpers/math-helpers";
 const SERVER_URL = "http://localhost:3001";
 
 export default class Friend {
-    constructor(id) {
+    constructor(id, context) {
         this.id = id;
+        this.context = context;
 
-        this.loadFriendData();
+        //this.getFriendData();
 
         this.updatePosition();
     }
 
-    loadFriendData() {
+    getFriendData() {
         this.database.getFriend(this.id).then((data) => {
             if (data) {
                 this.name = data.name;
@@ -26,18 +27,20 @@ export default class Friend {
                 this.likes = []; //Generate ranom likes and dislikes, single word topics.
                 this.dislikes = [];
                 this.personality = ["introvert", "extrovert", "ambivert"][Math.floor(gaussian(0, 3, 1.5, 0.5))];
-                this.last_meetup = null;
             }
 
             switch(this.personality) {
                 case "introvert":
-                    this.updateCooldownMax = 3;
+                    this.updateCooldownMax = 400;
+                    this.updateInterval = 3;
                     break;
                 case "extrovert":
-                    this.updateCooldownMax = 1;
+                    this.updateCooldownMax = 300;
+                    this.updateInterval = 1;
                     break;
                 case "ambivert":
-                    this.updateCooldownMax = 2;
+                    this.updateCooldownMax = 360;
+                    this.updateInterval = 2;
                     break;
             }
 
@@ -56,9 +59,12 @@ export default class Friend {
     }
 
     async updatePosition() {
-        //let location = await this.map.getRandomLocation();
+        console.log(this.context)
+        this.position = {
+            latitude: this.context.region.latitude + (gaussian(0, 0.2, 0.1, 0.03) - 0.1),
+            longitude: this.context.region.longitude + (gaussian(0, 0.2, 0.1, 0.03) - 0.1)
+        };
     }
-
 
     async update() {
         this.updateCooldown++;
@@ -66,6 +72,9 @@ export default class Friend {
 
         if (this.updateCooldown == 0) {
             this.updatePoints(1);
+        }
+        if (!this.updateCooldown % this.updateInterval) {
+            this.updatePosition();
         }
     }
 
