@@ -1,6 +1,6 @@
 import { Image, View, StyleSheet, TouchableOpacity, Text } from "react-native";
 import GreetingCard from "../components/GreetingCard";
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+// import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 // import TopBar from "../components/TopBar";
 
@@ -21,10 +21,10 @@ const Home = ({ navigation }) => {
       <TouchableOpacity
         style={styles.button}
         onPress={() =>
-          navigation.navigate('AvatarEditScreen')
+          navigation.navigate('ExplorePageScreen')
         }
         >
-        <Text>Edit Avatar </Text>
+        <Text>Go Exploring!</Text>
       </TouchableOpacity>
       </View>
     </View>
