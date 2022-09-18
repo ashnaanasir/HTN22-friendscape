@@ -17,10 +17,6 @@ const FriendFinderScreen = ( { navigation, route } ) => {
     
     return (
         <View>
-            <Text style={styles.heading}>
-                Friends List
-            </Text>
-            <>
                 <ListItem
                     leadingMode="avatar"
                     title="brit"
@@ -62,17 +58,16 @@ const FriendFinderScreen = ( { navigation, route } ) => {
                     trailing={forwardIcon}
                     overline={"Level 12"}
                 />
+                <View style={styles.main}>
                 <Icon 
                     name={"plus"} 
                     size={50}
                     style={{
-                        margin: "auto",
-                        display: "flex",
-                        padding: "25px",
+                        padding: 25,
                         color: "grey",
                     }}
                 />
-            </>
+                </View>
         </View>
     );
 }
@@ -93,22 +88,9 @@ const styles = StyleSheet.create({
         left: 0,
         overflow: 'hidden',
     },
-    camera: {
-        flex: 1,
-        width: 'auto',
-        height: '100vh',
-        resizeMode: 'cover',
-        position: 'absolute',
-        top: '-9999px',
-        bottom: '-9999px',
-        left: '-9999px',
-        right: '-9999px',
-        margin: 'auto',
-    },
     main: {
-        flex: 1,
-        width: '100%',
-        height: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 });
 
